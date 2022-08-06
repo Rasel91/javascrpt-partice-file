@@ -1,6 +1,6 @@
-// milesTokilomers
+//Target: Conver milesTokilomers
 
-function milesTokilomter(miles){
+function milesTokilomter(miles) {
     const kilometer = miles * 1.609;
     return kilometer;
 
@@ -8,4 +8,4 @@ function milesTokilomter(miles){
 
 const meherpurMiles = 14;
 const meherpurkilometer = milesTokilomter(meherpurMiles);
-console.log('MeherpurMiles:',meherpurkilometer);
+console.log('MeherpurMiles:', meherpurkilometer);
