@@ -1,4 +1,4 @@
-//Target: Conver milesTokilomers
+// Target: Conver miles to kilomers
 
 function milesTokilomter(miles) {
     const kilometer = miles * 1.609;
