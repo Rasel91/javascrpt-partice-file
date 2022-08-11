@@ -14,9 +14,11 @@ function woodcalculator(chairQuantity, tableQuantity, bedQuantity){
     const bedewood = bedQuantity * perBedwood;
 
     // console.log(chairQuantity, tableQuantity, bedQuantity);
+
     const totalwood = chairwood + tablewood + bedewood;
+    
     return totalwood;
 }
 
-const totalwood = woodcalculator(4, 6, 5);
+const totalwood = woodcalculator(24, 6, 5);
 console.log(totalwood);
