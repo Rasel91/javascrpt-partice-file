@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment </title>
+</head>
+
+<body>
+    <h1> Pleae Add your Comment</h1>
+    <div id="comment-container">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident rem incidunt, quae
+            neque repudiandae
+            minima
+            nam dolore aliquam id perferendis cum harum dignissimos! Provident nihil voluptate esse. Incidunt, dolorem
+            quas.
+            Praesentium repudiandae magni, est esse aliquid quidem corrupti, consectetur accusamus officiis laboriosam
+            quae
+            illum ducimus facere odio, soluta facilis neque.</p>
+        <p>Sed doloribus soluta ullam optio dicta sapiente fuga sit accusantium harum ipsum deleniti quo in nulla, totam
+            iste. Tenetur, quisquam obcaecati, a dolorum quasi pariatur nulla, doloremque minus tempora esse aperiam
+            nemo
+            eligendi ipsum maiores nesciunt fuga! Iusto earum accusamus possimus, consequatur repellat voluptate harum.
+            Vitae veniam quaerat voluptates! Ea.</p>
+        <p>Aperiam ut inventore minus saepe nobis repellendus dicta minima quae maiores incidunt eligendi maxime
+            sapiente
+            corporis optio ipsa modi laudantium odit, voluptates ducimus harum. Dolor consequuntur inventore aperiam
+            praesentium atque doloremque fuga pariatur, iure ducimus nostrum veritatis suscipit sunt dignissimos eum
+            cumque
+            sapiente corrupti labore esse? Neque nisi quas sit!</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="7"></textarea>
+        <br>
+        <button id="btn-post">post</button>
+    </div>
+
+    <script>
+        // Setep-1: Add evenlistener to button
+        document.getElementById('btn-post').addEventListener('click', function () {
+            // Setep-2: Get the comment indise text area
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+            // Setep-3: Get the comment indise text area
+            // 1. get the comment container
+            // 2. create a new element (p tag)
+            // 3.set the text of the comment as innerText of the p tag
+            // 4. add the p tag using appenChild
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+
+            // step-4: clear the text area
+            commentBox.value = '';
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
