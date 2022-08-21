@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bapp Er Bank Recap</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <h1 class="text-5xl  text-center mt-4 ">Functional <span class="text-orange-800 font-bold">Baper Bank</span></h1>
+
+    <section>
+        <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto mt-4">
+            <!-- deposit-total  -->
+            <div class="bg-yellow-600 p-8 rounded-lg font-bold ">
+                <h4 class="text-white text-3xl ">Deposit</h4>
+                <h2 class="text-3xl  text-white">$<span id="deposit-total">00</span></h2>
+            </div>
+            <!-- wihtdraw -->
+            <div class="bg-blue-600 p-8 rounded-lg font-bold ">
+                <h4 class="text-white text-3xl ">Wihtdraw</h4>
+                <h2 class="text-3xl  text-white ">$<span id="deposit-Wihtdraw">00</span></h2>
+            </div>
+            <!-- Balance-total -->
+            <div class="bg-green-600 p-8 rounded-lg font-bold ">
+                <h4 class="text-white text-3xl ">Balance</h4>
+                <h2 class="text-3xl text-white ">$<span id="balance-total">1240</span></h2>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- 
+    deposit and Wihtdraw seection -->
+
+    <section class="mt-4 w-9/12 mx-auto ">
+        <div class="grid grid-cols-2 gap-4 ">
+            <div class="bg-green-400 rounded-lg p-8 ">
+
+                <h3 class="text-4xl font-medium  text-white font-bold">Your Deposit</h3>
+
+                <input id="deposit-filed" class="rounded-lg p-2 w-3/4 mt-2 block" type="text"
+                    placeholder="$ Amount you Deposit here">
+
+                <button id="btn-deposit"
+                    class=" bg-green-600 rounded-lg px-4 py-2 mt-2 text-white hover:bg-blue-400">Deposit</button>
+            </div>
+            <!-- withdraw field -->
+            <div class="bg-blue-400 rounded-lg p-8 ">
+
+                <h3 class="text-4xl font-medium  text-white font-bold"> Your Wihtdraw </h3>
+
+                <input id="withdraw-feild" class="rounded-lg p-2 w-3/4 mt-2 block" type="text"
+                    placeholder="$ Amount you Wihtdraw">
+
+                <button id="btn-withdraw"
+                    class=" bg-green-600 rounded-lg px-4 py-2 mt-2 text-white hover:bg-blue-200 ">Wihtdraw</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bank.js"></script>
+    <script src="js/wihtdraw.js"></script>
+</body>
+
+</html>
