@@ -55,3 +55,34 @@ const nums = [2, 6, 5, 7, 9];
 const makeDobules = nums.map(x => x * 2);
 
 console.log(makeDobules);
+
+
+const divdedArry = [3, 6, 8, 10, 12].map(x => x / 2);
+console.log(divdedArry);
+
+
+// 4. Map String arry, arry of objects Map,Foreach
+const numbers3 = [12, 56, 87, 44];
+const half = numbers3.map(x => x / 2);
+console.log(half);
+
+
+const friends = ['Tomal', 'Tamil', 'Tata', 'Bata', 'Chata'];
+const firstLetter = friends.map(friend => friend[0]);
+const firstLength = friends.map(friend => friend.length);
+console.log(firstLetter);
+console.log(firstLength);
+
+
+
+const products = [
+    { id: 1, name: 'laptop', price: '45000' },
+    { id: 2, name: 'mobile', price: '75000' },
+    { id: 3, name: 'watch', price: '55000' },
+    { id: 4, name: 'tablet', price: '65000' }
+];
+
+const items = products.map(p => p.price);
+
+// const items = products.map(p => p.price  >=50000);
+console.log(items);
