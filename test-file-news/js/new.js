@@ -9,8 +9,6 @@ const loadNews = async () => {
     displayNews(data.data.news_category);
 };
 
-
-
 // news displayNews
 
 function displayNews(news) {
@@ -21,9 +19,7 @@ function displayNews(news) {
         newsDiv.classList.add('ul');
         newsDiv.innerHTML = `
         <ul> 
-        <li class="nav-item">
-        <a onclick="loadCatagoriesDetails(${category.category_id})" class="nav-link active" aria-current="page" href="#">${category.category_name} </a>
-       </li>
+        <button onclick="loadCatagoriesDetails('${category._id}')" class=" btn ">${category.category_name} </button>
        </ul>
         
         `;
@@ -37,7 +33,7 @@ loadNews();
 // ===============
 
 const loadNewsPart = async () => {
-    const url = ('https://openapi.programming-hero.com/api/news/category/01')
+    const url = ('https://openapi.programming-hero.com/api/news/category/03')
     const res = await fetch(url)
     const data = await res.json()
     // console.log(data)
@@ -51,19 +47,17 @@ function displayNewsPart(information) {
     const newsPartContainer = document.getElementById('newspart-container');
     information.forEach(info => {
         const newPartDiv = document.createElement('div');
-
-
         newPartDiv.classList.add('user');
         newPartDiv.innerHTML = `
 
-       <div class= 'd-flex mb-5px border-danger  ' >
+       <div class= 'd-flex mb-5px border-danger mb-4 border ' >
             <div class="col-md-4">
                  <img src="${info.image_url}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">${info.title}</h5>
-                    <p class="card-text">${info.details}</p>
+                    <p class="card-text">${info.details.slice(0, 180) }</p>
                 </div>
               <div> 
               <div class="d-flex justify-content-evenly" >
@@ -86,9 +80,9 @@ function displayNewsPart(information) {
     
         </div>
 
-      <button class="btn btn-primary btn-size">See More</button>  
-              
-              
+      <button type="button "class="btn btn-primary btn-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      See More
+  </button>     
               
               </div>
 
@@ -112,26 +106,18 @@ function displayNewsPart(information) {
     });
 }
 
-const loadCatagoriesDetails = (category_id) => {
-    console.log(category_id);
+const loadCatagoriesDetails = (id) => {
+    const url = `https://openapi.programming-hero.com/api/news/${id}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => console.log(data.data
+        ));
+
+
+    // console.log(url);
 }
 
 
 loadNewsPart();
 
 
-
-
-// author Information
-
-// const loadNewsAuthor = async () => {
-//     const url = ('https://openapi.programming-hero.com/api/news/0282e0e58a5c404fbd15261f11c2ab6a')
-//     const res = await fetch(url)
-//     const data = await res.json()
-//     console.log(data)
-//     // displayNewsPart(data.data);
-//     // console.log(data.data);
-// }
-
-
-// loadNewsAuthor();
